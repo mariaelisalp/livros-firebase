@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "43839477180",
+    "project_id": "livrosfirebase-3951d",
+    "storage_bucket": "livrosfirebase-3951d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43839477180:android:fe6166a4b6a0e8311d07b9",
+        "android_client_info": {
+          "package_name": "com.example.li"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1MZH0HmnO3--h7mFLr7AlsWVTra0dTBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43839477180:android:c1379afa53d254f31d07b9",
+        "android_client_info": {
+          "package_name": "com.example.livrosfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1MZH0HmnO3--h7mFLr7AlsWVTra0dTBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

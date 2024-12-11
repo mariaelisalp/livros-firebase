@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:livrosfirebase/components/my_button.dart';
 import 'package:livrosfirebase/components/my_textfield.dart';
 import 'package:livrosfirebase/service/auth_service.dart';
-import 'package:livrosfirebase/views/home_page.dart';
+import 'package:livrosfirebase/views/auth_page.dart';
 import 'package:livrosfirebase/views/register_page.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  final String? successMessage;
+
+  LoginPage({this.successMessage});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -17,8 +19,25 @@ class _LoginPageState extends State<LoginPage> {
   final passwordController = TextEditingController();
   final AuthService authService = AuthService();
 
+
+  @override
+  void initState(){
+    super.initState();
+     if (widget.successMessage != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(widget.successMessage!),
+            duration: Duration(seconds: 2),
+          ),
+        );
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -105,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                             );
                           } 
                           else {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const AuthPage()));
                           }
                         },
                         text: "Entrar",

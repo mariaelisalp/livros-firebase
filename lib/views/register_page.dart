@@ -16,7 +16,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
   final AuthService authService = AuthService();
-  String? errorMessage; // Para armazenar mensagens de erro
+  String? errorMessage; 
 
   @override
   Widget build(BuildContext context) {
